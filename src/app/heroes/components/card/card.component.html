@@ -12,19 +12,19 @@
     <br />
     <mat-chip-listbox>
       <mat-chip
-        *ngFor="let name of hero.characters.split(',') | slice : 0 : 3"
+        *ngFor="let name of hero.characters.split(',') | slice : 0 : 1"
         >{{ name }}</mat-chip
       >
     </mat-chip-listbox>
   </mat-card-content>
-  <mat-divider></mat-divider>
+  <mat-divider class="mt-2"></mat-divider>
   <mat-card-actions>
-    <button mat-button mat-raised [routerLink]="['/heroes/edit', hero.id]">
+    <button mat-button [routerLink]="['/heroes/edit', hero.id]">
       <mat-icon>edit</mat-icon> Editar
     </button>
     <span class="spacer"></span>
-    <button mat-button mat-raised [routerLink]="['/heroes', hero.id]">
-      <mat-icon>more_horiz</mat-icon>
+    <button mat-button [routerLink]="['/heroes', hero.id]">
+      <mat-icon>more_horiz</mat-icon>Más
     </button>
   </mat-card-actions>
 </mat-card>

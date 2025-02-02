@@ -3,7 +3,6 @@
 html,
 body {
   height: 100%;
-
 }
 body {
   margin: 0;
@@ -17,4 +16,13 @@ body {
 }
 hr {
   color: #fafafa;
+}
+mat-card {
+  border-radius: 0 !important;
+}
+mat-sidenav {
+  border-radius: 0 !important;
+}
+button {
+  border-radius: 5px !important;
 }
