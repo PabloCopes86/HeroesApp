@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login-page',
@@ -9,8 +10,13 @@ import { Router } from '@angular/router';
   styles: ``,
 })
 export class LoginPageComponent {
-  constructor(private router: Router) {}
-  login() {
-    return this.router.navigateByUrl('/heroes/list');
+  constructor(private authService: AuthService, private router: Router) {}
+  onLogin() {
+    this.authService
+      .login('pablocopes@mail.com', '123456')
+      .subscribe((user) => {
+
+        this.router.navigate(['/'])
+      });
   }
 }
