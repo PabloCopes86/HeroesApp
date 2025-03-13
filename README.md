@@ -1,5 +1,5 @@
 # HeroesApp
-##Angular
+Angular App
 
 ## Dev
 
